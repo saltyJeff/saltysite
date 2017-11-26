@@ -1,0 +1,16 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+iframe {
+	width: 100%;
+	flex: 1;
+	cursor: pointer;
+}
+.editelem {
+	border: 1px solid purple;
+	position: fixed;
+	right: 0px;
+	background: white;
+}

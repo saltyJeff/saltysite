@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"title": "Generic HTML Element",
+	"description": "A set of attributes that work for HTML text tags",
+	"type": "object",
+	"properties": {
+		"textContent": {
+			"type": "string",
+			"description": "Sets the text of the element"
+		},
+		"style": {
+			"type": "object",
+			"description": "Sets the style object of the element",
+			"properties": {
+				"color": {
+					"type": "string"					
+				},
+				"fontSize": {
+					"type": "string"
+				},
+				"fontFamily": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
