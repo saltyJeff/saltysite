@@ -3,10 +3,11 @@
 	flex-direction: column;
 	width: 100%;
 }
-iframe {
+.frame { /*Nuking all custom stuff from outside the page*/
 	width: 100%;
 	flex: 1;
 	cursor: pointer;
+	border: 1px solid black;
 }
 .editelem {
 	border: 1px solid purple;

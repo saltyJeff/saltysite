@@ -1,0 +1,12 @@
+.elementList {
+	font-family: sans-serif;
+	font-size: 24pt;
+	width: 600px;
+}
+.elementListItem {
+	display: flex;
+	flex-direction: row;
+}
+.elementName {
+	flex: 1;
+}

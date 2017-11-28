@@ -14,6 +14,12 @@ export default class Home extends React.Component<null, null> {
 	editPage = (pathName: string) => {
 		App.appState.editPage(pathName);
 	}
+	updatePage = (pathName: string) => {
+		App.appState.updatePage(pathName);
+	}
+	refreshPage = (pathName: string) => {
+		App.appState.refreshPage(pathName);
+	}
 	render () {
 		return (
 			<div>
@@ -24,7 +30,14 @@ export default class Home extends React.Component<null, null> {
 				<ul>
 					{
 						Object.keys(App.appState.user.pages).map((pathName, index) => {
-							return (<li key={index}><button onClick={() => {this.editPage(pathName)}}>{pathName}</button></li>);
+							let closuresSuck = pathName;
+							return (<li key={index}>
+								<button onClick={() => this.editPage(closuresSuck)}>{pathName}</button>
+								<hr />
+								<button onClick={() => this.updatePage(closuresSuck)}>Update This Page</button>
+								<button onClick={() => this.refreshPage(closuresSuck)}>Revert This Page</button>
+								<hr />
+							</li>);
 						})
 					}
 				</ul>

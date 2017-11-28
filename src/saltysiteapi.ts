@@ -14,6 +14,10 @@ export interface User {
 		[key: string]: Page;
 	}
 }
+let apiURL = 'localhost:8080';
+export function setAPIUrl(url: string) {
+	apiURL = url;
+}
 //methods
 export async function login (creds: {username: string, password: string}): Promise<User> {
 	return {
@@ -52,3 +56,27 @@ export async function updatePage(pathName: string, newPage: Page) {
 	}
 	return '404';
 }
+
+export async function getElements(): Promise<string[]> {
+	return defaultElements;
+}
+export async function addElement(name: string) {
+
+}
+export async function removeElement(name: string) {
+
+}
+export const defaultElements = [
+	'h1',
+	'h2',
+	'h3',
+	'h4',
+	'h5',
+	'h6',
+	'video',
+	'img',
+	'article',
+	'hr',
+	'br',
+	'audio'
+]

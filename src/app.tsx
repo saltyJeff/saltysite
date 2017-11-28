@@ -9,6 +9,7 @@ import Navbar from './navbar';
 import Login from './login';
 import PageEditor from './pageeditor';
 import Home from './home';
+import Elements from './elements';
 const style = require('./app.css');
 
 export default class App extends React.Component<null, null> {
@@ -26,6 +27,7 @@ export default class App extends React.Component<null, null> {
 						<div className={style.pageBody}>
 							<Route exact path="/" component={Login} />
 							<Route path="/home" component={Home} />
+							<Route path="/elements" component={Elements} />
 							<Route path="/pages/:id" component={PageEditor} />
 						</div>
 					</div>
