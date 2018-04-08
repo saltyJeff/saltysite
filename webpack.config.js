@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-console.log(path.resolve(__dirname, "public"));
+console.log(path.resolve(__dirname, "docs"));
 module.exports = {
 	devtool: 'inline-source-map',
 	entry: [
@@ -8,7 +8,7 @@ module.exports = {
 	],
 	output: {
 	  filename: 'bundle.js',
-	  path: path.resolve(__dirname, "./public"),
+	  path: path.resolve(__dirname, "./docs"),
 	},
 	resolve: {
 	  // Add `.ts` and `.tsx` as a resolvable extension.
@@ -26,11 +26,10 @@ module.exports = {
 	},
 	devServer: {
 		publicPath: "/",
-		contentBase: "./public",
+		contentBase: "./docs",
 		hot: true
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NamedModulesPlugin()
 	]
 };
